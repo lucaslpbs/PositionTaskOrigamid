@@ -1,11 +1,11 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
 :root {
   --lithGrey: #f7f7f7;
   --greyText: #c6c6c6;
   --red: #ee2211;
   --white: #fff;
-}
-html {
-  font-family: Arial, Helvetica, sans-serif;
 }
 body {
   background-color: var(--lithGrey);
@@ -16,6 +16,7 @@ body {
   margin-top: 60px;
 }
 .containerMenu button {
+  margin-right: 10px;
   justify-content: center;
   padding: 15px 30px;
   border-radius: 4px;
@@ -24,10 +25,20 @@ body {
   color: #000;
   transition: 0.2s;
 }
+.lineIcons{
+  width: 60px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: var(--red);
+  position: absolute;
+  z-index: 1;
+  top: 325px;
+}
 .containerGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1000px;
+  position: relative;
 }
 .containerText {
   background-color: var(--white);
@@ -50,6 +61,7 @@ body {
 }
 button:hover {
   filter: brightness(0.8);
+  cursor: pointer;
 }
 p {
   font-size: 20px;
@@ -58,10 +70,42 @@ img {
   max-width: 100%;
 }
 .containerInformation {
+  margin: 0;
   background-color: var(--white);
+  padding: 50px;
+}
+h3{
+  margin: 0;
+}
+.titleInformation img{
+  align-self: flex-start;
+  margin-right: 10px;
+}
+.titleInformation{
+  display: flex;
+  align-items: center;
 }
 .containerRodape {
   background-color: var(--white);
   width: 100%;
   text-align: center;
+}
+@media (max-width: 1000px) {
+  .containerGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+@media (max-width: 1000px){
+  .containerMenu button {
+    margin-right: 10px;
+    justify-content: center;
+    padding: 15px 15px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--white);
+    color: #000;
+    transition: 0.2s;
+  }
 }
