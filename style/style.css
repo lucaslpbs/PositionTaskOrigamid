@@ -7,6 +7,12 @@
   --red: #ee2211;
   --white: #fff;
 }
+header {
+  margin: 0px;
+  justify-items: center;
+  display: grid;
+  gap: 3.75rem;
+}
 body {
   background-color: var(--lithGrey);
   margin: 0px;
@@ -83,8 +89,14 @@ section {
   list-style: none;
 }
 .titleInformation li {
+  display: flex;
   align-self: flex-start;
   margin-right: 5px;
+  align-items: flex-start;
+}
+.titleInformation li h3,
+p {
+  margin-left: 5px;
 }
 .titleInformation li:hover {
   border-left: 4px solid var(--red);
@@ -117,5 +129,11 @@ h3 {
     background-color: var(--white);
     color: #000;
     transition: 0.2s;
+  }
+}
+@media (max-width: 62.5rem) {
+  .lineIcons {
+    width: 0rem;
+    height: 0px;
   }
 }
